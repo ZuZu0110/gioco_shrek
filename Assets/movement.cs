@@ -7,22 +7,32 @@ public class movimento : MonoBehaviour
 {
     //attributi
     Rigidbody2D player;
-    Vector2 move;
-    public int speed;
+    private Animator animator;
     // Start is called before the first frame update
     void Start()
     {
         player = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        move = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-    }
-    private void FixedUpdate()
-    {
-        player.AddForce(move * speed, ForceMode2D.Force);
+        float dirX = Input.GetAxisRaw("Horizontal");
+        player.velocity = new Vector2(dirX * 7f, player.velocity.y);
+      
+       if (dirX > 0f)
+        {
+            animator.SetBool("camminata", true);
+        }
+        else if(dirX < 0f)
+        {
+            animator.SetBool("camminata", true);
+        }
+       else
+        {
+            animator.SetBool("camminata", false);
+        }
     }
 }
 
