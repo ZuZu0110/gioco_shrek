@@ -33,6 +33,9 @@ public class movimento : MonoBehaviour
         {
             animator.SetBool("camminata", false);
         }
+        if (dirX < -0.01f) transform.localScale = new Vector3(-1, 1, 1);
+        if (dirX > 0.01f) transform.localScale = new Vector3(1, 1, 1);
     }
+
 }
 
