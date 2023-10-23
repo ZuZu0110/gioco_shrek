@@ -1,0 +1,17 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class collezionabile : MonoBehaviour
+{
+    public int counter = 0;
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Collezionabile"))
+        {
+            Destroy(collision.gameObject);
+            counter++;
+            Debug.Log("Collezionabili: " + counter);
+        }
+    }
+}
