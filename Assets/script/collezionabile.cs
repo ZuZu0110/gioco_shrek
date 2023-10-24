@@ -16,5 +16,13 @@ public class collezionabile : MonoBehaviour
             counter++;
             Debug.Log("Collezionabili: " + counter);
         }
+       
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("Gabbia") && counter == 10)
+        {
+            Destroy(collision.gameObject);
+        }
     }
 }
