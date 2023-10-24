@@ -5,6 +5,9 @@ using UnityEngine;
 public class collezionabile : MonoBehaviour
 {
     public int counter = 0;
+    public collezionabile(int counter) {
+        this.counter = counter;
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Collezionabile"))

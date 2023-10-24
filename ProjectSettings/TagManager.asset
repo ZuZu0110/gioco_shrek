@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - Collezionabile
+  - Gabbia
   layers:
   - Default
   - TransparentFX
