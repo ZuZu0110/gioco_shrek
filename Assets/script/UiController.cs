@@ -7,18 +7,22 @@ public class UiController : MonoBehaviour
   public void Play()
     {
         sceneController.Loadscene(1);
+        Time.timeScale = 1;
     }
     public void Restart()
     {
         sceneController.Restart();
+        Time.timeScale = 1;
     }
     public void NextLevel()
     {
         sceneController.NextLevel();
+        Time.timeScale=1;
     }
     public void SceneLoad(int sceneIndex) 
     {
         sceneController.Loadscene(sceneIndex);
+        Time.timeScale = 1;
     }
 
 }
