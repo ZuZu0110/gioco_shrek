@@ -8,6 +8,7 @@ TagManager:
   - Collezionabile
   - Gabbia
   - vittoria
+  - Nemico
   layers:
   - Default
   - TransparentFX

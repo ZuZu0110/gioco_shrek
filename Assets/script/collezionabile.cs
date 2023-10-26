@@ -11,6 +11,7 @@ public class collezionabile : MonoBehaviour
         this.counter = counter;
     }
     public Canvas win;
+    public Canvas gameOver;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Collezionabile"))
@@ -30,6 +31,11 @@ public class collezionabile : MonoBehaviour
         if (collision.gameObject.CompareTag("vittoria"))
         {
             win.gameObject.SetActive(true);
+            Time.timeScale = 0;
+        }
+        if (collision.gameObject.CompareTag("Nemico"))
+        {
+            gameOver.gameObject.SetActive(true);
             Time.timeScale = 0;
         }
     }
