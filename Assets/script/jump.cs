@@ -3,55 +3,68 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class jump : MonoBehaviour
+public class Jump : MonoBehaviour
 {
-    Rigidbody2D player;
+   // Rigidbody2D player;
     [SerializeField] float jumpforce;
     [SerializeField] float gravityScale = 5;
     [SerializeField] float fallGravityScale = 15;
+    
 
     bool grounded;
 
+    Playermovement controls;
+    float direction = 0;
+
+    //public float speed;
+
+    public Rigidbody2D player;
 
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        player = GetComponent<Rigidbody2D>();
+        controls = new Playermovement();
+        controls.Enable();
+
+        controls.movement.jump.performed += ctx =>
+        {
+            jumpforce = ctx.ReadValue<float>();
+        };
     }
 
+   /* private void Update()
+    {
+        playerrb.velocity = new Vector2(playerrb.velocity.x, direction * speed * Time.deltaTime);
+    }*/
     // Update is called once per frame
     void Update()
-    {
+     {
+             player.AddForce(Vector2.up * jumpforce, ForceMode2D.Impulse);
+         
 
-
-        if (Input.GetKeyDown(KeyCode.Space) && grounded)
-        {
-            player.AddForce(Vector2.up * jumpforce, ForceMode2D.Impulse);
-        }
-        if (player.velocity.y > 0)
-        {
-            player.gravityScale = gravityScale;
-        }
-        else
-        {
-            player.gravityScale = fallGravityScale;
-        }
-    }
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("Ground"))
-        {
-            grounded = true;
-        }
-    }
-    private void OnCollisionExit2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("Ground"))
-        {
-            grounded = false;
-        }
-    }
+         if (player.velocity.y > 0)
+         {
+             player.gravityScale = gravityScale;
+         }
+         else
+         {
+             player.gravityScale = fallGravityScale;
+         }
+     }
+     private void OnCollisionEnter2D(Collision2D other)
+     {
+         if (other.gameObject.CompareTag("Ground"))
+         {
+             grounded = true;
+         }
+     }
+     private void OnCollisionExit2D(Collision2D other)
+     {
+         if (other.gameObject.CompareTag("Ground"))
+         {
+             grounded = false;
+         }
+     }
 }
 
 
