@@ -3766,7 +3766,7 @@ PrefabInstance:
       objectReference: {fileID: 2065846605}
     - target: {fileID: 1030683773151977234, guid: 3ac6f1ae8f37a46298d0a79b743d9c52, type: 3}
       propertyPath: jumpforce
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2910947702246993648, guid: 3ac6f1ae8f37a46298d0a79b743d9c52, type: 3}
       propertyPath: m_Enabled
@@ -3828,7 +3828,8 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5408576635807300451, guid: 3ac6f1ae8f37a46298d0a79b743d9c52, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:

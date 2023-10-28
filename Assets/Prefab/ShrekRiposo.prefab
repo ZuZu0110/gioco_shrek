@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2910947702246993648}
   - component: {fileID: 1030683773151977234}
   - component: {fileID: 5225359216707837707}
+  - component: {fileID: 5408576635807300451}
   m_Layer: 0
   m_Name: ShrekRiposo
   m_TagString: Untagged
@@ -190,7 +191,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5380718209047314262}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 42102986d16a444228902d665ee9c577, type: 3}
   m_Name: 
@@ -210,6 +211,7 @@ MonoBehaviour:
   jumpforce: 20
   gravityScale: 5
   fallGravityScale: 10
+  player: {fileID: 6950779592654154150}
 --- !u!114 &5225359216707837707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223,3 +225,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
+  win: {fileID: 0}
+  gameOver: {fileID: 0}
+--- !u!114 &5408576635807300451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5380718209047314262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 569740a516ca1b54cb61adbbf1ce9ae7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 170
+  playerrb: {fileID: 6950779592654154150}
