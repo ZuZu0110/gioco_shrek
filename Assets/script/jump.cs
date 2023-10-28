@@ -28,7 +28,7 @@ public class Jump : MonoBehaviour
 
         controls.movement.jump.performed += ctx =>
         {
-            jumpforce = ctx.ReadValue<float>();
+            direction = ctx.ReadValue<float>();
         };
     }
 
@@ -39,8 +39,10 @@ public class Jump : MonoBehaviour
     // Update is called once per frame
     void Update()
      {
-             player.AddForce(Vector2.up * jumpforce, ForceMode2D.Impulse);
-         
+        if (grounded && controls.movement.jump.enabled)
+        {
+            player.AddForce(Vector2.up * direction * jumpforce, ForceMode2D.Impulse);
+        }
 
          if (player.velocity.y > 0)
          {

@@ -38,12 +38,12 @@ public partial class @Playermovement: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""jump"",
-                    ""type"": ""Value"",
+                    ""type"": ""Button"",
                     ""id"": ""69f62193-d8e5-4512-8653-24bbc99dc943"",
-                    ""expectedControlType"": """",
+                    ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Press"",
-                    ""initialStateCheck"": true
+                    ""interactions"": ""Press(behavior=2)"",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
