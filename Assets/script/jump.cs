@@ -14,7 +14,7 @@ public class Jump : MonoBehaviour
     bool grounded;
 
     Playermovement controls;
-    float direction = 0;
+   float direction = 0;
 
     //public float speed;
 
@@ -39,7 +39,7 @@ public class Jump : MonoBehaviour
     // Update is called once per frame
     void Update()
      {
-        if (grounded && controls.movement.jump.enabled)
+        if (grounded && controls.movement.jump.triggered)
         {
             player.AddForce(Vector2.up * direction * jumpforce, ForceMode2D.Impulse);
         }
