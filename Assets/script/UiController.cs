@@ -6,7 +6,7 @@ public class UiController : MonoBehaviour
 {
   public void Play()
     {
-        sceneController.Loadscene(1);
+        sceneController.Loadscene(2);
         Time.timeScale = 1;
     }
     public void Restart()
