@@ -60,7 +60,7 @@ public class LoginPagePlayFab : MonoBehaviour
     }
     private void OnLoginSuccess(LoginResult result)
     {
-        MessageText = "Loggin in";
+        MessageText.text = "Loggin in" ;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
@@ -69,7 +69,7 @@ public class LoginPagePlayFab : MonoBehaviour
         var request = new SendAccountRecoveryEmailRequest
         {
             Email = EmailRecoveryInput.text,
-            Titled = "ID PLAYFAB",
+            TitledId = "677E1",
         };
 
         PlayFabClientAPI.SendAccountRecoveryEmail(request, OnRecoverySuccess, OnErrorRecovery);

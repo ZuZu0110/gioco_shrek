@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: PlayFabEditorPrefsSO
   m_EditorClassIdentifier: 
   DevAccountEmail: lui.dipassio@stud.uniroma3.it
-  DevAccountToken: 
-  SelectedStudio: Zuzu&co
+  DevAccountToken: pugqbyfyqb64wa4tcuu9uxcye1ma7nkgju3jqwzfakdnefheyyfbmsg9nnk58macdpgj4564yn67wui18twa8raa8864deht59bgdzy6y8gdbkynptxqhutawqbdtquri8umz4i7kjwro4xj6mm8s8n8zqaaqjm9gqrotfwt3a3fb3eygexiapstsoru53y4rb1suqrf
+  SelectedStudio: 
   SdkPath: Assets/PlayFabSDK
   EdExPath: 
   LocalCloudScriptPath: 
   PanelIsShown: 0
-  curMainMenuIdx: 0
-  curSubMenuIdx: 0
+  curMainMenuIdx: 1
+  curSubMenuIdx: 2
