@@ -566,6 +566,10 @@ PrefabInstance:
       value: ShrekRiposo
       objectReference: {fileID: 0}
     - target: {fileID: 6950779592654154150, guid: 3ac6f1ae8f37a46298d0a79b743d9c52, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 5f7874a4aa6e43348bf094cf3170ae0e, type: 2}
+    - target: {fileID: 6950779592654154150, guid: 3ac6f1ae8f37a46298d0a79b743d9c52, type: 3}
       propertyPath: m_GravityScale
       value: 10
       objectReference: {fileID: 0}
