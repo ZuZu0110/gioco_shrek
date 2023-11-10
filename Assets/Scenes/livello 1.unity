@@ -7290,9 +7290,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 690635644}
     - target: {fileID: 8116372969657261628, guid: 623d3297bf3114a59a1bd4ceb0fd0c96, type: 3}
+      propertyPath: musicSounds.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8116372969657261628, guid: 623d3297bf3114a59a1bd4ceb0fd0c96, type: 3}
       propertyPath: musicSounds.Array.data[0].clip
       value: 
       objectReference: {fileID: 8300000, guid: 6c647adb3f7fd46eaa6bd47024e60747, type: 3}
+    - target: {fileID: 8116372969657261628, guid: 623d3297bf3114a59a1bd4ceb0fd0c96, type: 3}
+      propertyPath: musicSounds.Array.data[1].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6c647adb3f7fd46eaa6bd47024e60747, type: 3}
+    - target: {fileID: 8116372969657261628, guid: 623d3297bf3114a59a1bd4ceb0fd0c96, type: 3}
+      propertyPath: musicSounds.Array.data[1].name
+      value: Theme1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
