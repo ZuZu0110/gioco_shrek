@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
@@ -25,6 +26,14 @@ public class collezionabile : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.CompareTag("Gabbia") && counter == 10)
+        {
+            Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.CompareTag("Pozzo") && counter == 4)
+        {
+            Destroy(gameObject.GetComponent<Collider2D>());
+        }
+        if (collision.gameObject.CompareTag("Chiave") && counter == 4)
         {
             Destroy(collision.gameObject);
         }

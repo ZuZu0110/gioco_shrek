@@ -9,6 +9,9 @@ TagManager:
   - Gabbia
   - vittoria
   - Nemico
+  - Pozzo
+  - Chiave
+  - Muro
   layers:
   - Default
   - TransparentFX
