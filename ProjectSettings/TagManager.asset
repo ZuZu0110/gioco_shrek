@@ -12,6 +12,7 @@ TagManager:
   - Pozzo
   - Chiave
   - Muro
+  - Teleporter
   layers:
   - Default
   - TransparentFX

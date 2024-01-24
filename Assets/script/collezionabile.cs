@@ -23,19 +23,25 @@ public class collezionabile : MonoBehaviour
         }
        
     }
+    public void Destroyobject(string tag)
+    {
+        GameObject gameObjects = GameObject.FindGameObjectWithTag(tag);
+        Destroy(gameObjects);
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.CompareTag("Gabbia") && counter == 10)
         {
             Destroy(collision.gameObject);
         }
-        if (collision.gameObject.CompareTag("Pozzo") && counter == 4)
+        if (collision.gameObject.CompareTag("Pozzo") && counter == 0)
         {
-            Destroy(gameObject.GetComponent<Collider2D>());
+            Destroy(collision.gameObject.GetComponent<Collider2D>());
         }
-        if (collision.gameObject.CompareTag("Chiave") && counter == 4)
+        if (collision.gameObject.CompareTag("Chiave"))
         {
             Destroy(collision.gameObject);
+            Destroyobject("Muro");
         }
         if (collision.gameObject.CompareTag("vittoria"))
         {
