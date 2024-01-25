@@ -34,11 +34,11 @@ public class collezionabile : MonoBehaviour
         {
             Destroy(collision.gameObject);
         }
-        if (collision.gameObject.CompareTag("Pozzo") && counter == 0)
+        if (collision.gameObject.CompareTag("Pozzo") && counter == 4)
         {
             Destroy(collision.gameObject.GetComponent<Collider2D>());
         }
-        if (collision.gameObject.CompareTag("Chiave"))
+        if (collision.gameObject.CompareTag("Chiave") && counter == 4)
         {
             Destroy(collision.gameObject);
             Destroyobject("Muro");
