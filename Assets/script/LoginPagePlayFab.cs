@@ -28,15 +28,7 @@ public class LoginPagePlayFab : MonoBehaviour
     [SerializeField] TMP_InputField EmailRecoveryInput;
     [SerializeField] GameObject RecoveryPage;
 
-    void Start()
-    {
-
-    }
-    void Update()
-    {
-
-    }
-
+  
     #region Buttom Functions
     public void RegisterUser()
     {
@@ -69,7 +61,7 @@ public class LoginPagePlayFab : MonoBehaviour
         var request = new SendAccountRecoveryEmailRequest
         {
             Email = EmailRecoveryInput.text,
-            TitledId = "677E1",
+            TitleId= "677E1",
         };
 
         PlayFabClientAPI.SendAccountRecoveryEmail(request, OnRecoverySuccess, OnErrorRecovery);
