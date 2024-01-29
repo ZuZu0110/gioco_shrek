@@ -12,15 +12,13 @@ public class AudioManager : MonoBehaviour
     public Sound[] musicSounds;
     public AudioSource musicSource;
 
-    private void Awake()
+    
+  private void Awake()
     {
         if (Instance == null)
         {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
+            Instance = this;   
         }
-       else
-            Destroy(gameObject);
     }
     private void Start()
     {
@@ -40,7 +38,7 @@ public class AudioManager : MonoBehaviour
     }
     public void ToggleMusic()
     {
-        musicSource.mute = !musicSource.mute;
+       musicSource.mute = !musicSource.mute;
     }
 
 }
