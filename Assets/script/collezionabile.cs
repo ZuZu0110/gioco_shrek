@@ -8,6 +8,8 @@ using UnityEngine.UIElements;
 public class collezionabile : MonoBehaviour
 {
     public int counter = 0;
+    [SerializeField] private Text TS;
+    
     public collezionabile(int counter) {
         this.counter = counter;
     }
@@ -20,6 +22,8 @@ public class collezionabile : MonoBehaviour
             Destroy(collision.gameObject);
             counter++;
             Debug.Log("Collezionabili: " + counter);
+            TS.text = "COLLEZIONABILI: " + counter;
+           
         }
        
     }
